@@ -85,7 +85,7 @@
           <extkey_attcode>ipaddress_id</extkey_attcode>
           <target_attcode>fqdn</target_attcode>
         </field>
-        <field id="partition" xsi:type="AttributeExternalString">
+        <field id="partition" xsi:type="AttributeString">
           <sql>partition</sql>
           <default_value/>
           <is_null_allowed>true</is_null_allowed>
