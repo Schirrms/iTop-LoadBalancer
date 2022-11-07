@@ -181,6 +181,13 @@
         </list>
       </presentation>
       <methods>
+        <method id="GetRelationQueries">
+          <comment></comment>
+          <static>true</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[ public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+        </method>
       </methods>
     </class>
     <class id="lnkFunctionalCIToLoadBalancer" _delta="define">
@@ -291,6 +298,15 @@
           <duplicates/>
         </field>      
       </fields>
+      <relations>
+        <relation id="impacts">
+          <neighbours>
+            <neighbour id="loadbalancer" _delta="define">
+               <attribute>loadbalancer_list</attribute>
+            </neighbour>
+          </neighbours>
+        </relation>
+      </relations>
     </class>
 		<class id="NAS" _delta="must_exist">
 			<presentation>
