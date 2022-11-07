@@ -61,6 +61,7 @@
           <min_up_type>count</min_up_type>
         </field>
       </fields>
+      <presentation>
         <details>
           <items>
             <item id="name">
@@ -156,6 +157,7 @@
           </attributes>
         </reconciliation>
       </properties>
+      <fields>
         <field id="functionalci_id" xsi:type="AttributeExternalKey">
           <sql>functionalci_id</sql>
           <target_class>FunctionalCI</target_class>
