@@ -167,16 +167,16 @@
         <field id="functionalci_name" xsi:type="AttributeExternalField">
           <extkey_attcode>functionalci_id</extkey_attcode>
           <target_attcode>name</target_attcode>
+        </field>
         <field id="loadbalancer_id" xsi:type="AttributeExternalKey">
           <sql>loadbalancer_id</sql>
           <target_class>LoadBalancer</target_class>
           <is_null_allowed>false</is_null_allowed>
           <on_target_delete>DEL_AUTO</on_target_delete>
         </field>
-        <field id="LoadBalancer_name" xsi:type="AttributeExternalField">
+        <field id="loadbalancer_name" xsi:type="AttributeExternalField">
           <extkey_attcode>loadbalancer_id</extkey_attcode>
           <target_attcode>name</target_attcode>
-        </field>
         </field>
       </fields>
       <methods/>
