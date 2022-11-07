@@ -283,6 +283,12 @@
             <item id="loadbalancer_id">
               <rank>20</rank>
             </item>
+            <item id="proto">
+              <rank>30</rank>
+            </item>
+            <item id="port">
+              <rank>40</rank>
+            </item>
           </items>
         </list>
       </presentation>
