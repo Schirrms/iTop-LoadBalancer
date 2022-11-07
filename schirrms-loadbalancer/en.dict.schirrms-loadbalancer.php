@@ -10,7 +10,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	// Dictionary entries go here
 	'Class:LoadBalancer' => 'LoadBalancer',
 	'Class:LoadBalancer/Attribute:functionalcis_list' => 'CIs',
-	'Class:LoadBalancer/Attribute:functionalcis_list+' => 'All the configuration items that compose this application solution',
+	'Class:LoadBalancer/Attribute:functionalcis_list+' => 'All the configuration items that compose this Load Balancer configuration',
 	'Class:LoadBalancer/Attribute:status' => 'Status',
 	'Class:Certificate/Attribute:status/Value:active' => 'active',
 	'Class:Certificate/Attribute:status/Value:inactive' => 'inactive',
@@ -22,7 +22,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:LoadBalancer/Attribute:lbtype/Value:cluster' => 'Load Balancer Cluster',
 	'Class:LoadBalancer/Attribute:lbtype/Value:vip' => 'Virtual IP (or Virtual Server)',
 	'Class:LoadBalancer/Attribute:lbtype/Value:servicegroup' => 'Service Group',
-	'Class:LoadBalancer/Attribute:ipaddres_id' => 'IP Address',
+	'Class:LoadBalancer/Attribute:ipaddress_id' => 'IP Address',
 	'Class:LoadBalancer/Attribute:partition' => 'Partition in the Load Balancer',
 	'Class:lnkFunctionalCIToLoadBalancer' => 'Link Functional CIs / Load Balancer',
 	'Class:lnkFunctionalCIToLoadBalancer/Attribute:functionalci_id' => 'CI',
