@@ -1,7 +1,7 @@
 # iTop-LoadBalancer
 Add some LoadBalancer Classes to iTop
 
-This classes are highly inspired by the original 'SoftwareApplication' class. the idea is to have a versatile product, able to connect to virtually any Functional CI, as does the SoftwareApplication class, but with some 'technical informations available, mainly the IP address, not availavble in 'SoftwareApplication' and missing for our use
+This classes are highly inspired by the original 'ApplicationSolution' class. the idea is to have a versatile product, able to connect to virtually any Functional CI, as does the ApplicationSolution class, but with some 'technical informations' available, mainly the IP address, not availavble in 'ApplicationSolution' and missing for our use
 
 ## Further notes :
 
