@@ -60,6 +60,36 @@
           <min_up_mode>user</min_up_mode>
           <min_up_type>count</min_up_type>
         </field>
+				<field id="lbtype" xsi:type="AttributeEnum">
+					<values>
+						<value id="cluster">cluster</value>
+						<value id="vip">vip</value>
+						<value id="servicegroup">servicegroup</value>
+					</values>
+					<sql>lbtype</sql>
+					<default_value></default_value>
+					<is_null_allowed>true</is_null_allowed>
+					<display_style>list</display_style>
+				</field>
+        <field id="ipaddress_id" xsi:type="AttributeExternalKey">
+          <filter><![CDATA[SELECT IPAddress AS ip WHERE ip.status  NOT IN ('allocated', 'reserved') AND ip.org_id = :this->org_id]]></filter>
+          <dependencies>
+            <attribute id="org_id"/>
+          </dependencies>
+          <sql>ipaddress_id</sql>
+          <is_null_allowed>true</is_null_allowed>
+          <target_class>IPAddress</target_class>
+          <on_target_delete>DEL_MANUAL</on_target_delete>
+        </field>
+        <field id="ipaddress_name" xsi:type="AttributeExternalField" _altered_in="teemip-datacenter-mgmt-adaptor">
+          <extkey_attcode>ipaddress_id</extkey_attcode>
+          <target_attcode>fqdn</target_attcode>
+        </field>
+        <field id="partition" xsi:type="AttributeExternalString">
+          <sql>partition</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
       </fields>
       <presentation>
         <details>
@@ -79,14 +109,23 @@
             <item id="move2production">
               <rank>50</rank>
             </item>
-            <item id="description">
+            <item id="lbtype">
               <rank>60</rank>
             </item>
-            <item id="contacts_list">
+            <item id="partition">
+              <rank>65</rank>
+            </item>
+            <item id="ipaddress_id">
               <rank>70</rank>
             </item>
-            <item id="documents_list">
+            <item id="description">
               <rank>80</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>90</rank>
+            </item>
+            <item id="documents_list">
+              <rank>95</rank>
             </item>
             <item id="functionalcis_list">
               <rank>100</rank>
@@ -113,6 +152,9 @@
             <item id="move2production">
               <rank>40</rank>
             </item>
+            <item id="lbtype">
+              <rank>60</rank>
+            </item>
           </items>
         </search>
         <list>
@@ -125,6 +167,15 @@
             </item>
             <item id="move2production">
               <rank>30</rank>
+            </item>
+            <item id="lbtype">
+              <rank>60</rank>
+            </item>
+            <item id="partition">
+              <rank>65</rank>
+            </item>
+            <item id="ipaddress_id">
+              <rank>70</rank>
             </item>
           </items>
         </list>
@@ -178,6 +229,16 @@
           <extkey_attcode>loadbalancer_id</extkey_attcode>
           <target_attcode>name</target_attcode>
         </field>
+        <field id="proto" xsi:type="AttributeString">
+					<sql>proto</sql>
+					<default_value/>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
+        <field id="name" xsi:type="AttributeInteger">
+					<sql>port</sql>
+					<default_value/>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
       </fields>
       <methods/>
       <presentation>
@@ -188,6 +249,12 @@
             </item>
             <item id="loadbalancer_id">
               <rank>20</rank>
+            </item>
+            <item id="proto">
+              <rank>30</rank>
+            </item>
+            <item id="port">
+              <rank>40</rank>
             </item>
           </items>
         </details>
@@ -225,8 +292,82 @@
         </field>      
       </fields>
     </class>
+		<class id="NAS" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="loadbalancer_list" _delta="define">
+							<rank>57</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
+		<class id="Server" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="loadbalancer_list" _delta="define">
+							<rank>57</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
+		<class id="StorageSystem" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="loadbalancer_list" _delta="define">
+							<rank>57</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
+		<class id="TapeLibrary" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="loadbalancer_list" _delta="define">
+							<rank>57</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
+		<class id="VirtualMachine" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="loadbalancer_list" _delta="define">
+							<rank>57</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
   </classes>
   <menus>
+		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
+			<rank>1</rank>
+			<parent>ConfigManagement</parent>
+			<definition>
+				<layout>DashboardLayoutOneCol</layout>
+				<title/>
+				<cells>
+					<cell id="4" _delta="must_exist">						<!-- Dashboard -> Network -->
+						<rank>0</rank>
+						<dashlets>
+							<dashlet id="56" xsi:type="DashletBadge" _delta="define">
+								<rank>1</rank>
+								<class>LoadBalancer</class>
+							</dashlet>
+						</dashlets>
+					</cell>
+				</cells>
+			</definition>
+		</menu>
   </menus>
   <user_rights>
     <groups>
