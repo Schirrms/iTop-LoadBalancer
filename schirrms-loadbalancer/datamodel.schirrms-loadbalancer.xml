@@ -372,17 +372,12 @@
   </classes>
   <menus>
 		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
-			<rank>1</rank>
-			<parent>ConfigManagement</parent>
 			<definition>
-				<layout>DashboardLayoutOneCol</layout>
-				<title/>
 				<cells>
-					<cell id="4" _delta="must_exist">						<!-- Dashboard -> Network -->
-						<rank>0</rank>
+					<cell id="teemip-000" _delta="must_exist">						<!-- Dashboard -> Network (From TeemIP) -->
 						<dashlets>
-							<dashlet id="56" xsi:type="DashletBadge" _delta="define">
-								<rank>1</rank>
+							<dashlet id="teemip-019" xsi:type="DashletBadge" _delta="define">
+								<rank>9</rank>
 								<class>LoadBalancer</class>
 							</dashlet>
 						</dashlets>
