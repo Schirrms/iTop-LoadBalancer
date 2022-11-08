@@ -8,7 +8,7 @@
 
 Dict::Add('FR FR', 'French', 'Français', array(
 	// Dictionary entries go here
-	'Class:LoadBalancer' => 'LoadBalancer',
+	'Class:LoadBalancer' => 'Load Balancer',
 	'Class:LoadBalancer/Attribute:functionalcis_list' => 'CIs',
 	'Class:LoadBalancer/Attribute:functionalcis_list+' => 'Tous les CIs qui composent cette configuration de Load Balancer',
 	'Class:LoadBalancer/Attribute:status' => 'État',
