@@ -3,7 +3,7 @@
   <extension_code>schirrms-loadbalancer</extension_code>
   <version>0.1.0</version>
   <label><![CDATA[Add Load Balancers to iTop]]></label>
-  <description><![CDATA[Put here a longer description of your extension]]></description>
+  <description><![CDATA[Add a 'Load Balancer' Class to iTop. This extension was built for A10 load balancers so some fields are maybe 'A10 oriented'. Also, this extension depends on TeemIP core.]]></description>
   <mandatory>false</mandatory>
-  <more_info_url></more_info_url>
+  <more_info_url>https://github.com/Schirrms/iTop-LoadBalancer</more_info_url>
 </extension>  
