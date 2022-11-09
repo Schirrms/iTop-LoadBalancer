@@ -30,6 +30,14 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:lnkFunctionalCIToLoadBalancer/Attribute:proto' => 'Protocol',
 	'Class:lnkFunctionalCIToLoadBalancer/Attribute:proto+' => 'Protocol used, probably tcp or udp if running a Layer 4 LB, or maybe http / https / ... if running a Layer 7 LB',
 	'Class:lnkFunctionalCIToLoadBalancer/Attribute:port' => 'Port',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslsrc' => 'SSL initiator',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslsrc+' => 'Is the connection to the backend SSL protected ?',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslsrc/Value:yes' => 'Yes',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslsrc/Value:no' => 'No',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslend' => 'SSL termination',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslend+' => 'Does the load balancer terminate the SSL connection ?',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslend/Value:yes' => 'Yes',
+	'Class:lnkFunctionalCIToLoadBalancer/Attribute:sslend/Value:no' => 'No',
 	'Class:FunctionalCI/Attribute:loadbalancer_list' => 'Load Balancer(s)'
 ));
 ?>
