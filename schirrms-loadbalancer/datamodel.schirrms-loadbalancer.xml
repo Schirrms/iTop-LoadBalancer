@@ -136,6 +136,9 @@
             <item id="services_list">
               <rank>130</rank>
             </item>
+            <item id="loadbalancer_list">
+              <rank>140</rank>
+            </item>
           </items>
         </details>
         <search>
