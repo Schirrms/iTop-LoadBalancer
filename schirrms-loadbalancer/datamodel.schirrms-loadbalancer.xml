@@ -141,6 +141,18 @@
             </item>
           </items>
         </details>
+        <default_search>
+          <items>
+              <item id="name">
+                <rank>10</rank>
+              </item>
+              <item id="lbtype">
+                <rank>20</rank>
+              </item>
+              <item id="org_id">
+                <rank>30</rank>
+              </item>          </items>
+        </default_search>
         <search>
           <items>
             <item id="name">
