@@ -38,7 +38,7 @@ Although young, I consider this Extension in 'Stable' state. I don't think that 
 
 But I'm really interested knowing your opinion about this extension, and don't hesitate to put your comments on this forum.
 
-[iTop - teemip Load Balancer Extension Available](https://sourceforge.net/p/itop/discussion/third-party-extensions/)
+[iTop - teemip Load Balancer Extension Available](https://sourceforge.net/p/itop/discussion/third-party-extensions/thread/a903301f68/)
 
 # Goal
 
