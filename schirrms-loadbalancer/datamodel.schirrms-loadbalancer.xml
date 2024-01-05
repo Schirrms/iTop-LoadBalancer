@@ -422,10 +422,10 @@
 		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
 			<definition>
 				<cells>
-					<cell id="teemip-000" _delta="must_exist">						<!-- Dashboard -> Network (From TeemIP) -->
+					<cell id="0" _delta="if_exists">					<!-- Dashboard -> Infrastructure -->
 						<dashlets>
-							<dashlet id="teemip-019" xsi:type="DashletBadge" _delta="define">
-								<rank>9</rank>
+							<dashlet id="lb01" xsi:type="DashletBadge" _delta="define">
+								<rank>5.1</rank>
 								<class>LoadBalancer</class>
 							</dashlet>
 						</dashlets>
